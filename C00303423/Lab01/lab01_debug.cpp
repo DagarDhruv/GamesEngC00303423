@@ -31,8 +31,8 @@ public:
         return a * b;   //<BUG_3> fixed: swapped '/' for '*'>
     }
 
-    double divide(int a, int b) {
-        return a / b;   //<BUG_4> fixed: swapped '-' for '+'>
+    double divide(double a, double b) {
+        return a / b;   //<BUG_4> fixed: swapped int for the double for the decimal divison >
     } 
 };
 
