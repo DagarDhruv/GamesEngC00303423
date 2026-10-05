@@ -1,0 +1,21 @@
+# ninja log v5
+1	19	1790857302459672296	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-mkdir	5b106d02ad38ffca
+1	19	1790857302459672296	/Users/dhruvdagar/Downloads/lab04/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-mkdir	5b106d02ad38ffca
+19	611	1790857303052064028	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-download	59996443c85399d5
+19	611	1790857303052064028	/Users/dhruvdagar/Downloads/lab04/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-download	59996443c85399d5
+611	626	1790857303067208434	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-update	f4136f8024cd6d5f
+611	626	1790857303067208434	/Users/dhruvdagar/Downloads/lab04/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-update	f4136f8024cd6d5f
+626	642	1790857303083497153	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-patch	bf0d21a5644bd0fa
+626	642	1790857303083497153	/Users/dhruvdagar/Downloads/lab04/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-patch	bf0d21a5644bd0fa
+642	657	1790857303098118651	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-configure	6682c75d7292269
+642	657	1790857303098118651	/Users/dhruvdagar/Downloads/lab04/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-configure	6682c75d7292269
+657	672	1790857303112919854	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-build	1f01e5e9361b4dd5
+657	672	1790857303112919854	/Users/dhruvdagar/Downloads/lab04/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-build	1f01e5e9361b4dd5
+672	687	1790857303127509477	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-install	a79585bf3e4d775a
+672	687	1790857303127509477	/Users/dhruvdagar/Downloads/lab04/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-install	a79585bf3e4d775a
+687	702	1790857303142639757	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-test	97a366082799581b
+687	702	1790857303142639757	/Users/dhruvdagar/Downloads/lab04/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-test	97a366082799581b
+702	723	1790857303164063471	CMakeFiles/googletest-populate-complete	5bc27958ce0949a7
+702	723	1790857303164063471	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-done	5bc27958ce0949a7
+702	723	1790857303164063471	/Users/dhruvdagar/Downloads/lab04/cmake-build-debug/_deps/googletest-subbuild/CMakeFiles/googletest-populate-complete	5bc27958ce0949a7
+702	723	1790857303164063471	/Users/dhruvdagar/Downloads/lab04/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-done	5bc27958ce0949a7

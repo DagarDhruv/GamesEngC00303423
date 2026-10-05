@@ -1,0 +1,5 @@
+if(EXISTS "/Users/dhruvdagar/Downloads/lab04/cmake-build-debug/lab04_tests[1]_tests.cmake")
+  include("/Users/dhruvdagar/Downloads/lab04/cmake-build-debug/lab04_tests[1]_tests.cmake")
+else()
+  add_test(lab04_tests_NOT_BUILT lab04_tests_NOT_BUILT)
+endif()
