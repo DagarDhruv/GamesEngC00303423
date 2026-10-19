@@ -1,6 +1,6 @@
 // Lab 06 - Logic coverage: predicate, clause, fixtures, gcov
-// Name  :
-// Student ID:
+// Name  : Dhruv Dagar
+// Student ID: C00303423
 //
 // The unit under test is Discount::eligible in src/discount.cpp. 
 // The predicate is:

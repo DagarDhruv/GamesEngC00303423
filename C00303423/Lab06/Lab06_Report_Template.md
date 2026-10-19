@@ -1,7 +1,7 @@
 # Lab 06 — Report
 
-**Full Name:** 
-**Student ID:** 
+**Full Name:** Dhruv Dagar
+**Student ID:** C00303423
 
 ## Build, test, coverage
 
