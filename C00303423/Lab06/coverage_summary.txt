@@ -1,0 +1,7 @@
+File '/Users/dhruvdagar/Downloads/starter_code/src/discount.cpp'
+Lines executed:100.00% of 2
+Branches executed:100.00% of 4
+Taken at least once:100.00% of 4
+No calls
+Creating 'discount.cpp.gcov'
+
