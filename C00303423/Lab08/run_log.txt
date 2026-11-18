@@ -1,0 +1,233 @@
+=== 2026-11-18 11:54:15  [starter.] ===
+row  m  A B C D  exp act  result  Det DNF
+  1 15  1 1 1 1   1    0  FAIL          
+  2 14  1 1 1 0   1    0  FAIL          
+  3 13  1 1 0 1   1    0  FAIL        x 
+  4 12  1 1 0 0   1    0  FAIL          
+  5 11  1 0 1 1   1    0  FAIL    x   x 
+  6 10  1 0 1 0   0    0  PASS    x   x 
+  7  9  1 0 0 1   0    0  PASS    x   x 
+  8  8  1 0 0 0   0    0  PASS          
+  9  7  0 1 1 1   1    0  FAIL    x   x 
+ 10  6  0 1 1 0   1    0  FAIL          
+ 11  5  0 1 0 1   0    0  PASS        x 
+ 12  4  0 1 0 0   0    0  PASS          
+ 13  3  0 0 1 1   0    0  PASS    x   x 
+ 14  2  0 0 1 0   0    0  PASS          
+ 15  1  0 0 0 1   0    0  PASS          
+ 16  0  0 0 0 0   0    0  PASS          
+conditions failed: 7 / 16
+Test project /Users/dhruvdagar/Desktop/Lab08/build
+      Start  1: Rows/Determination.MatchesSpec/row5_A_true_C_true_D_true
+ 1/12 Test  #1: Rows/Determination.MatchesSpec/row5_A_true_C_true_D_true ...***Failed    0.01 sec
+Running main() from /Users/dhruvdagar/Desktop/Lab08/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = Rows/Determination.MatchesSpec/row5_A_true_C_true_D_true
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from Rows/Determination
+[ RUN      ] Rows/Determination.MatchesSpec/row5_A_true_C_true_D_true
+/Users/dhruvdagar/Desktop/Lab08/test/lab08_tests.cpp:23: Failure
+Expected equality of these values:
+  ctl.evaluateSmokePurge(t.a, t.b, t.c, t.d)
+    Which is: false
+  t.expected
+    Which is: true
+A_true_C_true_D_true
+
+[  FAILED  ] Rows/Determination.MatchesSpec/row5_A_true_C_true_D_true, where GetParam() = 24-byte object <C2-63 78-00 01-00 00-00 05-00 00-00 01-00 01-01 01-46 F0-50 01-00 00-00> (0 ms)
+[----------] 1 test from Rows/Determination (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 0 tests.
+[  FAILED  ] 1 test, listed below:
+[  FAILED  ] Rows/Determination.MatchesSpec/row5_A_true_C_true_D_true, where GetParam() = 24-byte object <C2-63 78-00 01-00 00-00 05-00 00-00 01-00 01-01 01-46 F0-50 01-00 00-00>
+
+ 1 FAILED TEST
+
+      Start  2: Rows/Determination.MatchesSpec/row6_D_false
+ 2/12 Test  #2: Rows/Determination.MatchesSpec/row6_D_false ................   Passed    0.00 sec
+      Start  3: Rows/Determination.MatchesSpec/row7_C_false
+ 3/12 Test  #3: Rows/Determination.MatchesSpec/row7_C_false ................   Passed    0.00 sec
+      Start  4: Rows/Determination.MatchesSpec/row9_B_true
+ 4/12 Test  #4: Rows/Determination.MatchesSpec/row9_B_true .................***Failed    0.00 sec
+Running main() from /Users/dhruvdagar/Desktop/Lab08/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = Rows/Determination.MatchesSpec/row9_B_true
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from Rows/Determination
+[ RUN      ] Rows/Determination.MatchesSpec/row9_B_true
+/Users/dhruvdagar/Desktop/Lab08/test/lab08_tests.cpp:23: Failure
+Expected equality of these values:
+  ctl.evaluateSmokePurge(t.a, t.b, t.c, t.d)
+    Which is: false
+  t.expected
+    Which is: true
+B_true
+
+[  FAILED  ] Rows/Determination.MatchesSpec/row9_B_true, where GetParam() = 24-byte object <E7-23 1A-04 01-00 00-00 09-00 00-00 00-01 01-01 01-30 1A-04 01-00 00-00> (0 ms)
+[----------] 1 test from Rows/Determination (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 0 tests.
+[  FAILED  ] 1 test, listed below:
+[  FAILED  ] Rows/Determination.MatchesSpec/row9_B_true, where GetParam() = 24-byte object <E7-23 1A-04 01-00 00-00 09-00 00-00 00-01 01-01 01-30 1A-04 01-00 00-00>
+
+ 1 FAILED TEST
+
+      Start  5: Rows/Determination.MatchesSpec/row13_A_false_B_false
+ 5/12 Test  #5: Rows/Determination.MatchesSpec/row13_A_false_B_false .......   Passed    0.00 sec
+      Start  6: Rows/DNF.MatchesSpec/row3_UTP_AB
+ 6/12 Test  #6: Rows/DNF.MatchesSpec/row3_UTP_AB ...........................***Failed    0.00 sec
+Running main() from /Users/dhruvdagar/Desktop/Lab08/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = Rows/DNF.MatchesSpec/row3_UTP_AB
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from Rows/DNF
+[ RUN      ] Rows/DNF.MatchesSpec/row3_UTP_AB
+/Users/dhruvdagar/Desktop/Lab08/test/lab08_tests.cpp:39: Failure
+Expected equality of these values:
+  ctl.evaluateSmokePurge(t.a, t.b, t.c, t.d)
+    Which is: false
+  t.expected
+    Which is: true
+UTP_AB
+
+[  FAILED  ] Rows/DNF.MatchesSpec/row3_UTP_AB, where GetParam() = 24-byte object <AF-25 C1-00 01-00 00-00 03-00 00-00 01-01 00-01 01-60 26-6F 01-00 00-00> (0 ms)
+[----------] 1 test from Rows/DNF (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 0 tests.
+[  FAILED  ] 1 test, listed below:
+[  FAILED  ] Rows/DNF.MatchesSpec/row3_UTP_AB, where GetParam() = 24-byte object <AF-25 C1-00 01-00 00-00 03-00 00-00 01-01 00-01 01-60 26-6F 01-00 00-00>
+
+ 1 FAILED TEST
+
+      Start  7: Rows/DNF.MatchesSpec/row5_UTP_ACD
+ 7/12 Test  #7: Rows/DNF.MatchesSpec/row5_UTP_ACD ..........................***Failed    0.00 sec
+Running main() from /Users/dhruvdagar/Desktop/Lab08/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = Rows/DNF.MatchesSpec/row5_UTP_ACD
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from Rows/DNF
+[ RUN      ] Rows/DNF.MatchesSpec/row5_UTP_ACD
+/Users/dhruvdagar/Desktop/Lab08/test/lab08_tests.cpp:39: Failure
+Expected equality of these values:
+  ctl.evaluateSmokePurge(t.a, t.b, t.c, t.d)
+    Which is: false
+  t.expected
+    Which is: true
+UTP_ACD
+
+[  FAILED  ] Rows/DNF.MatchesSpec/row5_UTP_ACD, where GetParam() = 24-byte object <B6-A5 88-04 01-00 00-00 05-00 00-00 01-00 01-01 01-E0 5E-6B 01-00 00-00> (0 ms)
+[----------] 1 test from Rows/DNF (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 0 tests.
+[  FAILED  ] 1 test, listed below:
+[  FAILED  ] Rows/DNF.MatchesSpec/row5_UTP_ACD, where GetParam() = 24-byte object <B6-A5 88-04 01-00 00-00 05-00 00-00 01-00 01-01 01-E0 5E-6B 01-00 00-00>
+
+ 1 FAILED TEST
+
+      Start  8: Rows/DNF.MatchesSpec/row6_NFP_ACD_flipD
+ 8/12 Test  #8: Rows/DNF.MatchesSpec/row6_NFP_ACD_flipD ....................   Passed    0.00 sec
+      Start  9: Rows/DNF.MatchesSpec/row7_NFP_ACD_flipC
+ 9/12 Test  #9: Rows/DNF.MatchesSpec/row7_NFP_ACD_flipC ....................   Passed    0.00 sec
+      Start 10: Rows/DNF.MatchesSpec/row9_UTP_BC
+10/12 Test #10: Rows/DNF.MatchesSpec/row9_UTP_BC ...........................***Failed    0.00 sec
+Running main() from /Users/dhruvdagar/Desktop/Lab08/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = Rows/DNF.MatchesSpec/row9_UTP_BC
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from Rows/DNF
+[ RUN      ] Rows/DNF.MatchesSpec/row9_UTP_BC
+/Users/dhruvdagar/Desktop/Lab08/test/lab08_tests.cpp:39: Failure
+Expected equality of these values:
+  ctl.evaluateSmokePurge(t.a, t.b, t.c, t.d)
+    Which is: false
+  t.expected
+    Which is: true
+UTP_BC
+
+[  FAILED  ] Rows/DNF.MatchesSpec/row9_UTP_BC, where GetParam() = 24-byte object <DA-E5 1E-00 01-00 00-00 09-00 00-00 00-01 01-01 01-00 00-00 00-00 00-00> (0 ms)
+[----------] 1 test from Rows/DNF (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 0 tests.
+[  FAILED  ] 1 test, listed below:
+[  FAILED  ] Rows/DNF.MatchesSpec/row9_UTP_BC, where GetParam() = 24-byte object <DA-E5 1E-00 01-00 00-00 09-00 00-00 00-01 01-01 01-00 00-00 00-00 00-00>
+
+ 1 FAILED TEST
+
+      Start 11: Rows/DNF.MatchesSpec/row11_NFP_flipA_flipC
+11/12 Test #11: Rows/DNF.MatchesSpec/row11_NFP_flipA_flipC .................   Passed    0.00 sec
+      Start 12: Rows/DNF.MatchesSpec/row13_NFP_flipB_flipA
+12/12 Test #12: Rows/DNF.MatchesSpec/row13_NFP_flipB_flipA .................   Passed    0.00 sec
+
+58% tests passed, 5 tests failed out of 12
+
+Total Test time (real) =   0.06 sec
+
+The following tests FAILED:
+	  1 - Rows/Determination.MatchesSpec/row5_A_true_C_true_D_true (Failed)
+	  4 - Rows/Determination.MatchesSpec/row9_B_true (Failed)
+	  6 - Rows/DNF.MatchesSpec/row3_UTP_AB (Failed)
+	  7 - Rows/DNF.MatchesSpec/row5_UTP_ACD (Failed)
+	 10 - Rows/DNF.MatchesSpec/row9_UTP_BC (Failed)
+Errors while running CTest
+ctest exit code: 8
+
+=== 2026-11-18 11:57:11  [final.] ===
+row  m  A B C D  exp act  result  Det DNF
+  1 15  1 1 1 1   1    1  PASS          
+  2 14  1 1 1 0   1    1  PASS          
+  3 13  1 1 0 1   1    1  PASS        x 
+  4 12  1 1 0 0   1    1  PASS          
+  5 11  1 0 1 1   1    1  PASS    x   x 
+  6 10  1 0 1 0   0    0  PASS    x   x 
+  7  9  1 0 0 1   0    0  PASS    x   x 
+  8  8  1 0 0 0   0    0  PASS          
+  9  7  0 1 1 1   1    1  PASS    x   x 
+ 10  6  0 1 1 0   1    1  PASS          
+ 11  5  0 1 0 1   0    0  PASS        x 
+ 12  4  0 1 0 0   0    0  PASS          
+ 13  3  0 0 1 1   0    0  PASS    x   x 
+ 14  2  0 0 1 0   0    0  PASS          
+ 15  1  0 0 0 1   0    0  PASS          
+ 16  0  0 0 0 0   0    0  PASS          
+conditions failed: 0 / 16
+Test project /Users/dhruvdagar/Desktop/Lab08/build
+      Start  1: Rows/Determination.MatchesSpec/row5_A_true_C_true_D_true
+ 1/12 Test  #1: Rows/Determination.MatchesSpec/row5_A_true_C_true_D_true ...   Passed    0.01 sec
+      Start  2: Rows/Determination.MatchesSpec/row6_D_false
+ 2/12 Test  #2: Rows/Determination.MatchesSpec/row6_D_false ................   Passed    0.01 sec
+      Start  3: Rows/Determination.MatchesSpec/row7_C_false
+ 3/12 Test  #3: Rows/Determination.MatchesSpec/row7_C_false ................   Passed    0.00 sec
+      Start  4: Rows/Determination.MatchesSpec/row9_B_true
+ 4/12 Test  #4: Rows/Determination.MatchesSpec/row9_B_true .................   Passed    0.00 sec
+      Start  5: Rows/Determination.MatchesSpec/row13_A_false_B_false
+ 5/12 Test  #5: Rows/Determination.MatchesSpec/row13_A_false_B_false .......   Passed    0.00 sec
+      Start  6: Rows/DNF.MatchesSpec/row3_UTP_AB
+ 6/12 Test  #6: Rows/DNF.MatchesSpec/row3_UTP_AB ...........................   Passed    0.00 sec
+      Start  7: Rows/DNF.MatchesSpec/row5_UTP_ACD
+ 7/12 Test  #7: Rows/DNF.MatchesSpec/row5_UTP_ACD ..........................   Passed    0.00 sec
+      Start  8: Rows/DNF.MatchesSpec/row6_NFP_ACD_flipD
+ 8/12 Test  #8: Rows/DNF.MatchesSpec/row6_NFP_ACD_flipD ....................   Passed    0.00 sec
+      Start  9: Rows/DNF.MatchesSpec/row7_NFP_ACD_flipC
+ 9/12 Test  #9: Rows/DNF.MatchesSpec/row7_NFP_ACD_flipC ....................   Passed    0.00 sec
+      Start 10: Rows/DNF.MatchesSpec/row9_UTP_BC
+10/12 Test #10: Rows/DNF.MatchesSpec/row9_UTP_BC ...........................   Passed    0.00 sec
+      Start 11: Rows/DNF.MatchesSpec/row11_NFP_flipA_flipC
+11/12 Test #11: Rows/DNF.MatchesSpec/row11_NFP_flipA_flipC .................   Passed    0.00 sec
+      Start 12: Rows/DNF.MatchesSpec/row13_NFP_flipB_flipA
+12/12 Test #12: Rows/DNF.MatchesSpec/row13_NFP_flipB_flipA .................   Passed    0.00 sec
+
+100% tests passed out of 12
+
+Total Test time (real) =   0.07 sec
+ctest exit code: 0
+
