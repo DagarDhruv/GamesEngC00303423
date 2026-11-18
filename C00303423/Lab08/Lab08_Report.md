@@ -90,11 +90,11 @@ p_D = A¬B·C
 
 For each clause, list the pairs of rows that differ only in that clause and say whether F changes. Confirm that the rows where F changes are exactly the rows where your p<sub>X</sub> is true.
 
-Clause	Pairs (X true row, X false row) : F values	Rows where F changes
-A	(1,9) 1/1 no · (2,10) 1/1 no · (3,11) 1/0 yes · (4,12) 1/0 yes · (5,13) 1/0 yes · (6,14) 0/0 no · (7,15) 0/0 no · (8,16) 0/0 no	3,4,5,11,12,13
-B	(1,5) 1/1 no · (2,6) 1/0 yes · (3,7) 1/0 yes · (4,8) 1/0 yes · (9,13) 1/0 yes · (10,14) 1/0 yes · (11,15) 0/0 no · (12,16) 0/0 no	2,3,4,6,7,8,9,10,13,14
-C	(1,3) 1/1 no · (2,4) 1/1 no · (5,7) 1/0 yes · (6,8) 0/0 no · (9,11) 1/0 yes · (10,12) 1/0 yes · (13,15) 0/0 no · (14,16) 0/0 no	5,7,9,10,11,12
-D	(1,2) 1/1 no · (3,4) 1/1 no · (5,6) 1/0 yes · (7,8) 0/0 no · (9,10) 1/1 no · (11,12) 0/0 no · (13,14) 0/0 no · (15,16) 0/0 no	5,6
+Clause    Pairs (X true row, X false row) : F values    Rows where F changes
+A    (1,9) 1/1 no · (2,10) 1/1 no · (3,11) 1/0 yes · (4,12) 1/0 yes · (5,13) 1/0 yes · (6,14) 0/0 no · (7,15) 0/0 no · (8,16) 0/0 no    3,4,5,11,12,13
+B    (1,5) 1/1 no · (2,6) 1/0 yes · (3,7) 1/0 yes · (4,8) 1/0 yes · (9,13) 1/0 yes · (10,14) 1/0 yes · (11,15) 0/0 no · (12,16) 0/0 no    2,3,4,6,7,8,9,10,13,14
+C    (1,3) 1/1 no · (2,4) 1/1 no · (5,7) 1/0 yes · (6,8) 0/0 no · (9,11) 1/0 yes · (10,12) 1/0 yes · (13,15) 0/0 no · (14,16) 0/0 no    5,7,9,10,11,12
+D    (1,2) 1/1 no · (3,4) 1/1 no · (5,6) 1/0 yes · (7,8) 0/0 no · (9,10) 1/1 no · (11,12) 0/0 no · (13,14) 0/0 no · (15,16) 0/0 no    5,6
 
 
 ### 1.4 GACC, CACC and RACC pairs
@@ -240,18 +240,55 @@ Number of tests: Determination = 5 , DNF = 7 , all passing? <fill in after your 
 
 ## Part 4 — Automation
 
-* Command used to run your script:
-* What your oracle is, and why it is independent of the C++ code:
-* Summary of the run against the starter (how many conditions failed):
-* Summary of the final run:
+* Command used to run your script: `python3 scripts/run_checks.py --cli build/hvac_cli --label "<starter|final>"`
+* What your oracle is, and why it is independent of the C++ code: a Python function `oracle(a,b,c,d)` that evaluates R1, R2, R3 and R4 directly from the specification text and ORs them. It shares no code, language or logic with `evaluateSmokePurge()`, and it uses the unsimplified requirements, so a mistake in my K-map minimisation cannot hide inside it.
+* Summary of the run against the starter: <paste from run_log.txt> (expected: 7 of 16 conditions fail, one for each row where F = 1, because the starter always returns false).
+* Summary of the final run: <paste from run_log.txt> (expected: 0 of 16 fail; ctest passes all 12 parameterised tests).
 
 Paste the table your script printed for the final run here.
 
+=== 2026-11-18 11:57:11  [final.] ===
+row  m  A B C D  exp act  result  Det DNF
+  1 15  1 1 1 1   1    1  PASS          
+  2 14  1 1 1 0   1    1  PASS          
+  3 13  1 1 0 1   1    1  PASS        x 
+  4 12  1 1 0 0   1    1  PASS          
+  5 11  1 0 1 1   1    1  PASS    x   x 
+  6 10  1 0 1 0   0    0  PASS    x   x 
+  7  9  1 0 0 1   0    0  PASS    x   x 
+  8  8  1 0 0 0   0    0  PASS          
+  9  7  0 1 1 1   1    1  PASS    x   x 
+ 10  6  0 1 1 0   1    1  PASS          
+ 11  5  0 1 0 1   0    0  PASS        x 
+ 12  4  0 1 0 0   0    0  PASS          
+ 13  3  0 0 1 1   0    0  PASS    x   x 
+ 14  2  0 0 1 0   0    0  PASS          
+ 15  1  0 0 0 1   0    0  PASS          
+ 16  0  0 0 0 0   0    0  PASS        
 ---
+
+Implementation used: `return (a && b) || (b && c) || (a && c && d);`
 
 ## Part 5 — Comparison of the two methods (300–500 words)
 
 Which conditions does each suite use that the other does not? What kind of fault in `evaluateSmokePurge()` could pass every test in the Determination suite but fail the DNF suite? Give a concrete faulty expression and show, using your conditions table, which row exposes it. Which suite would you keep if you could only keep one, and why?
+
+
+The two suites overlap quite a lot. The Determination suite uses rows 13, and all of these are also included in the DNF suite. The DNF suite adds two extra rows, 3 and 11. The Determination suite focuses on showing that each clause can change the output while the other clauses stay fixed, whereas the DNF suite is based on the implementation, giving each DNF term a unique true point and each literal a near-false point.
+
+A fault that passes the Determination suite but fails the DNF suite must therefore occur at row 3 or 11. For example, consider this faulty expression:
+
+(a && b && c) || (a && c && d) || (b && c)
+
+This simplifies to BC + ACD. Checking the five Determination rows gives the correct expected results: row 5 = 1, row 6 = 0, row 7 = 0, row 9 = 1 and row 13 = 0. So it passes the Determination suite. However, at row 3 (T T F T), the faulty expression gives 0 when the expected result is 1, so the DNF suite catches it.
+
+Another example is replacing BC with b && (c || d). This fault is hidden in the Determination suite because row 9 is the only selected row where B is true, and C is also true there. However, at row 11 (F T F T), the output becomes 1 instead of the expected 0, so the DNF suite catches it.
+
+The reason the DNF suite catches these faults is that its near-false points are close to true terms, making it easier to detect missing, extra or incorrect literals. The Determination suite only checks clause changes along one path.
+
+If I had to keep only one suite, I would choose the DNF suite. It includes all five Determination tests plus two extra tests, so it catches more faults for only two additional tests. It also tests the minimised expression that is actually implemented.
+
+However, neither suite covers rows 1, 2, 4, 8, 10, 12, 14, 15 and 16. A fault affecting only one of these rows could pass both suites. For example, the purge might fail when all four inputs are true. This is why the exhaustive 16-condition test from Part 4 is still important and should be run every time.
 
 ---
 
